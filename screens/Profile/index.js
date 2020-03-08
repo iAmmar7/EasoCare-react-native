@@ -88,7 +88,7 @@ function Profile() {
                   style={{color: 'gray'}}
                 />
               </View>
-              <Text style={{color: 'black', fontSize: 12, paddingTop: 4}}>
+              <Text style={{color: 'gray', fontSize: 12, paddingTop: 4}}>
                 RECENT
               </Text>
             </View>
@@ -110,8 +110,8 @@ function Profile() {
                   style={{color: 'gray'}}
                 />
               </View>
-              <Text style={{color: 'black', fontSize: 12, paddingTop: 4}}>
-                RECENT
+              <Text style={{color: 'gray', fontSize: 12, paddingTop: 4}}>
+                COUPONS
               </Text>
             </View>
 
@@ -132,7 +132,7 @@ function Profile() {
                   style={{color: 'gray'}}
                 />
               </View>
-              <Text style={{color: 'black', fontSize: 12, paddingTop: 4}}>
+              <Text style={{color: 'gray', fontSize: 12, paddingTop: 4}}>
                 RECENT
               </Text>
             </View>
@@ -281,7 +281,11 @@ function Profile() {
         </Text>
       </View>
       <View style={styles.footer}></View>
-      <Modal testID={'modal'} isVisible={model} style={styles.model}>
+      <Modal
+        testID={'modal'}
+        isVisible={model}
+        style={styles.model}
+        onBackdropPress={() => setModel(false)}>
         <View
           style={{
             height: height / 1.7,
@@ -421,6 +425,7 @@ const styles = StyleSheet.create({
   model: {
     justifyContent: 'flex-end',
     margin: 0,
+    backgroundColor: 'rgba(0, 51, 102,0.9)',
   },
 });
 
