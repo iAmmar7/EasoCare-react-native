@@ -3,12 +3,13 @@ import {StatusBar} from 'react-native';
 import Authentication from './screens/Auth/index';
 
 import Profile from './screens/Profile/index';
+import CreateProfile from './screens/createProfile/index';
 
 const App = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <Profile />
+      <StatusBar barStyle="white" />
+      <CreateProfile />
     </>
   );
 };

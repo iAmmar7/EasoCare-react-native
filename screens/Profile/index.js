@@ -425,7 +425,7 @@ const styles = StyleSheet.create({
   model: {
     justifyContent: 'flex-end',
     margin: 0,
-    backgroundColor: 'rgba(0, 51, 102,0.9)',
+    backgroundColor: 'rgba(0, 0, 0,0.7)',
   },
 });
 
