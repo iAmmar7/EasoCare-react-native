@@ -24,7 +24,7 @@ import Carousel, {Pagination} from 'react-native-snap-carousel';
 import CarouselItem from '../../components/carouselItem';
 let width = Dimensions.get('window').width;
 
-function CarouselItems() {
+function CarouselItems({navigation}) {
   let [indexi, setIndex] = useState(0);
   const _renderItem = ({item, index}) => {
     return <CarouselItem />;
@@ -37,6 +37,7 @@ function CarouselItems() {
           type="MaterialCommunityIcons"
           name="filter-variant"
           style={{color: 'gray'}}
+          onPress={() => navigation.openDrawer()}
         />
       </View>
       <Carousel
@@ -51,7 +52,6 @@ function CarouselItems() {
         sliderWidth={width}
         itemWidth={width - 20}
       />
-
       <Pagination
         dotsLength={4}
         activeDotIndex={indexi}
@@ -71,6 +71,7 @@ function CarouselItems() {
         inactiveDotOpacity={0.8}
         inactiveDotScale={0.9}
       />
+      <View style={styles.line} />
     </View>
   );
 }
@@ -96,6 +97,14 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     alignItems: 'center',
     justifyContent: 'space-evenly',
+  },
+  line: {
+    height: 4,
+    width: '50%',
+    borderRadius: 3,
+    backgroundColor: '#50425b',
+    alignSelf: 'center',
+    marginVertical: 10,
   },
 });
 

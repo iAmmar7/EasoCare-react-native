@@ -10,7 +10,7 @@ import {
 
 let {height} = Dimensions.get('window');
 
-function Authentication() {
+function Authentication({navigation}) {
   let [isSignUp, setSignUp] = useState(false);
   return (
     <View style={styles.container}>
@@ -40,7 +40,11 @@ function Authentication() {
           <TextInput style={styles.input} placeholder="Password" />
         </View>
       </View>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => {
+          navigation.navigate('CreateProfile');
+        }}>
         <Text style={{color: 'white'}}>CONTINUE</Text>
       </TouchableOpacity>
     </View>
@@ -76,7 +80,7 @@ const styles = StyleSheet.create({
     width: 330,
     height: 55,
     borderRadius: 30,
-    backgroundColor: '#644085',
+    backgroundColor: '#8a56ac',
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 30,
@@ -84,7 +88,7 @@ const styles = StyleSheet.create({
   subLayer: {
     height: height / 2.5,
 
-    backgroundColor: '#644085',
+    backgroundColor: '#8a56ac',
     borderBottomLeftRadius: 150,
     position: 'absolute',
     top: 0,

@@ -29,38 +29,51 @@ function CouponItem({
       <View style={{flexDirection: 'row'}}>
         <Image
           source={{
-            uri:
-              'https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
+            uri: image,
           }}
           style={{
             height: 50,
             width: 50,
             borderRadius: 25,
-            borderWidth: 2,
+            borderWidth: isNotification ? 2 : 0,
             borderColor: 'white',
           }}
         />
-        <View style={{paddingLeft: 20}}>
-          <Text style={{color: 'white', paddingBottom: 4}}>Coca-Cola</Text>
+        <View style={{paddingLeft: 20, width: 170}}>
+          <Text
+            style={{
+              color: isNotification ? 'white' : '#8d8296',
+              paddingBottom: 4,
+            }}>
+            {title}
+          </Text>
           <Text style={{fontWeight: 'bold', color: 'white', fontSize: 17}}>
-            Discount 80%
+            {text}
           </Text>
         </View>
       </View>
 
       <View>
-        <Text style={{color: 'white', paddingBottom: 4}}>9 hrs</Text>
-        <View
+        <Text
           style={{
-            height: 25,
-            width: 25,
-            borderRadius: 12.5,
-            backgroundColor: 'white',
-            justifyContent: 'center',
-            alignItems: 'center',
+            color: isNotification ? 'white' : '#8d8296',
+            paddingBottom: 4,
           }}>
-          <Text>4</Text>
-        </View>
+          {time}
+        </Text>
+        {isNotification && (
+          <View
+            style={{
+              height: 25,
+              width: 25,
+              borderRadius: 12.5,
+              backgroundColor: 'white',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Text>{numberOfNotifications}</Text>
+          </View>
+        )}
       </View>
     </View>
   );

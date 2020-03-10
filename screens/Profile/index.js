@@ -13,12 +13,17 @@ import Modal from 'react-native-modal';
 
 let height = Dimensions.get('window').height;
 
-function Profile() {
+function Profile({navigation}) {
   let [model, setModel] = useState(false);
   return (
     <View style={styles.conatiner}>
-      <Fab style={{backgroundColor: 'white'}} position="bottomRight">
-        <Icon type="AntDesign" name="plus" style={{color: '#4b0066'}} />
+      <Fab
+        style={{backgroundColor: 'white'}}
+        position="bottomRight"
+        onPress={() => {
+          navigation.navigate('Coupons');
+        }}>
+        <Icon type="AntDesign" name="plus" style={{color: '#423050'}} />
       </Fab>
       <ImageBackground
         imageStyle={{borderBottomLeftRadius: 100}}
@@ -174,7 +179,7 @@ function Profile() {
                   height: 40,
                   width: 40,
                   borderRadius: 20,
-                  backgroundColor: '#4b0066',
+                  backgroundColor: '#241332',
                   justifyContent: 'center',
                   alignItems: 'center',
                   marginRight: 13,
@@ -202,7 +207,7 @@ function Profile() {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              borderRightColor: '#38004d',
+              borderRightColor: '#423050',
               borderRightWidth: 0.5,
             }}>
             <View>
@@ -376,7 +381,7 @@ function Profile() {
 const styles = StyleSheet.create({
   conatiner: {
     flex: 1,
-    backgroundColor: '#250033',
+    backgroundColor: '#241332',
   },
   headerContainer: {
     flex: 0.7,
@@ -394,16 +399,16 @@ const styles = StyleSheet.create({
   iconsContainer: {
     flex: 0.8,
     borderLeftWidth: 0.5,
-    borderLeftColor: '#4b0066',
-    borderBottomColor: '#4b0066',
+    borderLeftColor: '#423050',
+    borderBottomColor: '#423050',
     borderBottomWidth: 0.5,
     borderBottomLeftRadius: 80,
   },
   aboutContainer: {
     flex: 0.5,
     borderLeftWidth: 0.5,
-    borderLeftColor: '#4b0066',
-    borderBottomColor: '#4b0066',
+    borderLeftColor: '#423050',
+    borderBottomColor: '#423050',
     borderBottomWidth: 0.5,
     borderBottomLeftRadius: 80,
     justifyContent: 'center',
@@ -412,8 +417,8 @@ const styles = StyleSheet.create({
   experContainer: {
     flex: 0.5,
     borderLeftWidth: 0.5,
-    borderLeftColor: '#4b0066',
-    borderBottomColor: '#4b0066',
+    borderLeftColor: '#423050',
+    borderBottomColor: '#423050',
     borderBottomWidth: 0.5,
     borderBottomLeftRadius: 80,
     justifyContent: 'center',

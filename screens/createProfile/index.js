@@ -22,7 +22,7 @@ import {
 } from 'native-base';
 let width = Dimensions.get('window').width;
 
-function CreateProfile() {
+function CreateProfile({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -55,7 +55,7 @@ function CreateProfile() {
         <View style={styles.inputs}>
           <Item
             floatingLabel
-            style={{borderBottomColor: '#4b0066', paddingTop: 7}}>
+            style={{borderBottomColor: '#423050', paddingTop: 7}}>
             <Label style={{color: 'gray', fontWeight: 'bold'}}>
               Company Name
             </Label>
@@ -65,7 +65,7 @@ function CreateProfile() {
             floatingLabel
             style={{
               marginTop: 20,
-              borderBottomColor: '#4b0066',
+              borderBottomColor: '#423050',
               paddingTop: 7,
             }}>
             <Label style={{color: 'gray', fontWeight: 'bold'}}>
@@ -136,7 +136,7 @@ function CreateProfile() {
               <Icon
                 type="MaterialIcons"
                 name="location-on"
-                style={{color: '#8634eb', fontSize: 33}}
+                style={{color: '#8a56ac', fontSize: 33}}
               />
             </ImageBackground>
           </View>
@@ -146,7 +146,7 @@ function CreateProfile() {
             <Item
               floatingLabel
               style={{
-                borderBottomColor: '#4b0066',
+                borderBottomColor: '#423050',
                 paddingTop: 7,
                 width: '15%',
               }}>
@@ -158,7 +158,7 @@ function CreateProfile() {
             <Item
               floatingLabel
               style={{
-                borderBottomColor: '#4b0066',
+                borderBottomColor: '#423050',
                 paddingTop: 7,
                 width: '15%',
               }}>
@@ -172,7 +172,7 @@ function CreateProfile() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 borderRadius: 30,
-                backgroundColor: '#8634eb',
+                backgroundColor: '#8a56ac',
                 marginLeft: 25,
               }}>
               <Icon
@@ -189,9 +189,12 @@ function CreateProfile() {
               height: 60,
               width: '100%',
               borderRadius: 30,
-              backgroundColor: '#8634eb',
+              backgroundColor: '#8a56ac',
               justifyContent: 'center',
               alignItems: 'center',
+            }}
+            onPress={() => {
+              navigation.navigate('Profile');
             }}>
             <Text style={{color: 'white', fontSize: 18}}>SAVE</Text>
           </TouchableOpacity>
@@ -215,7 +218,7 @@ function CreateProfile() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#250033',
+    backgroundColor: '#241332',
   },
   headerContainer: {
     height: '20%',

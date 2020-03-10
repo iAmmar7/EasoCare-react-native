@@ -24,7 +24,7 @@ import LeftMessage from '../../components/leftMessage';
 import RightMessage from '../../components/RightMessage';
 let width = Dimensions.get('window').width;
 
-function Contact() {
+function Contact({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -103,6 +103,9 @@ function Contact() {
               type="Ionicons"
               name="ios-mic"
               style={{color: 'white', fontSize: 30}}
+              onPress={() => {
+                navigation.navigate('CarouselItems');
+              }}
             />
           </Item>
         </View>
@@ -121,7 +124,7 @@ const styles = StyleSheet.create({
   },
   messages: {
     flexGrow: 1,
-    paddingBottom:100
+    paddingBottom: 100,
   },
   footer: {
     height: '10%',
