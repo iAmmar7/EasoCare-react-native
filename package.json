@@ -13,6 +13,7 @@
     "native-base": "^2.13.8",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-app-intro-slider": "^3.0.0",
     "react-native-modal": "^11.5.4",
     "react-native-snap-carousel": "^3.8.4"
   },

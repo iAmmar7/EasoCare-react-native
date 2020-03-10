@@ -59,18 +59,17 @@ function CarouselItems() {
           width: 10,
           height: 10,
           borderRadius: 5,
-          marginHorizontal: 8,
+
           backgroundColor: '#8a56ac',
         }}
         inactiveDotStyle={{
           width: 10,
           height: 10,
           borderRadius: 5,
-          marginHorizontal: 8,
           backgroundColor: '#d3d3d3',
         }}
-        inactiveDotOpacity={0.4}
-        inactiveDotScale={0.6}
+        inactiveDotOpacity={0.8}
+        inactiveDotScale={0.9}
       />
     </View>
   );
