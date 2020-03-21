@@ -12,6 +12,7 @@ import Contact from '../screens/contact/index';
 import Coupons from '../screens/coupons/index';
 import Comment from '../screens/comment/index';
 import Question from '../screens/question/index';
+import QuestionWithSlider from '../screens/questionWithSlider/index';
 import Notifications from '../screens/notifications/index';
 import CarouselItems from '../screens/carousel/index';
 import Intro from '../screens/introScreens/index';
@@ -29,9 +30,10 @@ const BasicStack = createStackNavigator(
     Notifications,
     Comment,
     Question,
+    QuestionWithSlider,
   },
   {
-    initialRouteName: 'Question',
+    initialRouteName: 'Intro',
     headerMode: 'none',
     navigationOptions: {
       headerVisible: false,
