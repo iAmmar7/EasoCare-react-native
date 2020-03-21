@@ -153,13 +153,13 @@ const styles = StyleSheet.create({
   },
   pinkContainer: {
     // flex: 1,
-    backgroundColor: '#d4536f',
+    backgroundColor: '#d47fa6',
     borderBottomLeftRadius: 100,
   },
   topTwoNotification: {
     // flex: 1,
     borderBottomLeftRadius: 100,
-    backgroundColor: '#c75b73',
+    backgroundColor: '#d47fa6',
   },
   thirdNotification: {
     // flex: 1,
@@ -176,8 +176,8 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 100,
   },
   pinkNotification: {
-    borderLeftColor: '#cf6b83',
-    borderBottomColor: '#cf6b83',
+    borderLeftColor: '#aaa',
+    borderBottomColor: '#aaa',
     paddingRight: 10,
   },
 });
