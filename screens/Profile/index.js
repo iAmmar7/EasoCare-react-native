@@ -293,7 +293,7 @@ function Profile({navigation}) {
         onBackdropPress={() => setModel(false)}>
         <View
           style={{
-            height: height / 1.7,
+            height: height / 1.2,
             backgroundColor: 'white',
             borderTopLeftRadius: 80,
           }}>

@@ -67,13 +67,13 @@ function CarouselItem() {
 
 const styles = StyleSheet.create({
   listItem: {
-    height: '80%',
+    height: '100%',
     width: '90%',
     backgroundColor: 'white',
     borderRadius: 100,
     alignItems: 'center',
     justifyContent: 'space-evenly',
-    alignSelf:'center'
+    alignSelf: 'center',
   },
 });
 
