@@ -11,6 +11,7 @@ import CreateProfile from '../screens/createProfile/index';
 import Contact from '../screens/contact/index';
 import Coupons from '../screens/coupons/index';
 import Comment from '../screens/comment/index';
+import CommentWithTextField from '../screens/commentWithTextField/index';
 import Question from '../screens/question/index';
 import QuestionWithSlider from '../screens/questionWithSlider/index';
 import Notifications from '../screens/notifications/index';
@@ -29,11 +30,12 @@ const BasicStack = createStackNavigator(
     CarouselItems,
     Notifications,
     Comment,
+    CommentWithTextField,
     Question,
     QuestionWithSlider,
   },
   {
-    initialRouteName: 'Intro',
+    initialRouteName: 'CommentWithTextField',
     headerMode: 'none',
     navigationOptions: {
       headerVisible: false,
